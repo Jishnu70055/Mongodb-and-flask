@@ -1,6 +1,6 @@
 from flask import Flask,request
 from flask.json import jsonify
-from app import db,col
+from app import db
 import uuid
 
 class User:
@@ -13,5 +13,5 @@ class User:
 
 
         }
-        col.users.insert_one(user)
+        db.users.insert_one(user)
         return jsonify(user), 200
