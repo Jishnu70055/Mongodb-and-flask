@@ -1,15 +1,16 @@
-from flask import Flask,request
-from flask.json import jsonify
+from flask import Flask,request,jsonify
+# from flask.json import jsonify
 from app import db
 import uuid
 
 class User:
     def signup(self):
+
         user = {
-            "_id":uuid.uuid4().hex(),
+            "_id":uuid.uuid4().hex,
             "name":request.form.get('name'),
             "email":request.form.get('email'),
-            "password":request.form.get('password'),
+            "password":request.form.get('password')
 
 
         }

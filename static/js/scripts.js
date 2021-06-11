@@ -2,7 +2,7 @@ $("form[name=signup_form").submit(function(e){
     var $form = $(this);
     var $error = $form.find(".error");
     var data = $form.serialize();
-    $ajax({
+    $.ajax({
         url:"/user/signup",
         type:"POST",
         data:data,
@@ -13,6 +13,6 @@ $("form[name=signup_form").submit(function(e){
         error:function(resp){
             console.log(resp);
         }
-    });
+    })
     e.preventDefault();
 });
